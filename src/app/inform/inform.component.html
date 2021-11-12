@@ -1,0 +1,31 @@
+
+<div class="container">
+  <div class="row" style='background-color: #6c757d;'>
+    <div class="col-sm text-center">
+      Placa
+    </div>
+    <div class="col-sm text-justify">
+      Marca
+    </div>
+    <div class="col-sm text-justify">
+      Conductor
+    </div>
+    <div class="col-sm text-justify">
+      Propietario
+    </div>
+  </div>
+  <div class="row" *ngFor="let res of results; let i = index" [ngStyle]="{'background-color' : i %2 == 0 ? '#198754':'#ffffff'}">
+    <div class="col-sm text-center">
+      {{ res.plate }}
+    </div>
+    <div class="col-sm text-justify">
+      {{ res.mark }}
+    </div>
+    <div class="col-sm text-justify">
+      {{ res.driver }}
+    </div>
+    <div class="col-sm text-justify">
+      {{ res.owner }}
+    </div>
+  </div>
+</div>

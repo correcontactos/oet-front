@@ -1,0 +1,39 @@
+<div *ngIf="selectedType == 'owner'">
+  <h3>Propietario</h3>
+</div>
+<div *ngIf="selectedType == 'driver'">
+  <h3>Conductor</h3>
+</div>  
+<div>
+  <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" >
+  <div class="form-group">
+  <label for="document">Documento</label>
+  <input type="document" name="document" formControlName="document" autocomplete="off" class="form-control input-sm" placeholder="Documento" [(ngModel)]="selectedDocument">
+  </div>
+  <div class="form-group">
+  <label for="first_name">Primer Nombre</label>
+  <input type="text" name="first_name" formControlName="first_name" autocomplete="off" class="form-control input-sm" placeholder="Primer Nombre" [(ngModel)]="selectedFirstName">
+  </div>
+  <div class="form-group">
+  <label for="second_name">Segundo Nombre</label>
+  <input type="text" name="second_name" formControlName="second_name" autocomplete="off" class="form-control input-sm" placeholder="Segundo Nombre" [(ngModel)]="selectedSecondName">
+  </div>
+  <div class="form-group">
+    <label for="last_name">Apellido(s)</label>
+    <input type="text" name="last_name" formControlName="last_name" autocomplete="off" class="form-control input-sm" placeholder="Apellido(s)" [(ngModel)]="selectedLastName">
+  </div>
+  <div class="form-group">
+    <label for="address">Dirección</label>
+    <input type="text" name="address" formControlName="address" autocomplete="off" class="form-control input-sm" placeholder="Dirección" [(ngModel)]="selectedAddress">
+  </div>
+  <div class="form-group">
+    <label for="phone">Teléfono</label>
+    <input type="text" name="phone" formControlName="phone" autocomplete="off" class="form-control input-sm" placeholder="Teléfono" [(ngModel)]="selectedPhone">
+  </div>
+  <div class="form-group">
+    <label for="last_name">Ciudad</label>
+    <input type="text" name="city" formControlName="city" autocomplete="off" class="form-control input-sm" placeholder="Ciudad" [(ngModel)]="selectedCity">
+  </div>
+  <button type="submit" class="btn btn-success" >Guardar</button>
+  </form>
+</div>

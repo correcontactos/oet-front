@@ -1,0 +1,26 @@
+
+<div>
+  <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" >
+  <div class="form-group">
+  <label for="plate">Placa</label>
+  <input type="plate" name="plate" formControlName="plate" autocomplete="off" class="form-control input-sm" placeholder="Plate" [(ngModel)]="selectedPlate">
+  </div>
+  <div class="form-group">
+  <label for="color">Color</label>
+  <input type="text" name="color" formControlName="color" autocomplete="off" class="form-control input-sm" placeholder="Color" [(ngModel)]="selectedColor">
+  </div>
+  <div class="form-group">
+  <label for="mark">Marca</label>
+  <input type="mark" name="mark" formControlName="mark" autocomplete="off" class="form-control input-sm" placeholder="Marca" [(ngModel)]="selectedMark">
+  </div>
+  <div class="form-group">
+  <label for="type">Tipo</label>
+  <select type="type" name="type" formControlName="type" class="form-control input-sm" [(ngModel)]="selectedType">
+    <option [value]="o.id" *ngFor="let o of options">
+      {{ o.name }}
+    </option>
+  </select>
+  </div>
+  <button type="submit" class="btn btn-success" >Guardar</button>
+  </form>
+</div>
